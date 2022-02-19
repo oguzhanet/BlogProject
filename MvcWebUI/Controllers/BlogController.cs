@@ -2,7 +2,7 @@
 
 namespace MvcWebUI.Controllers
 {
-    public class CategoyController : Controller
+    public class BlogController : Controller
     {
         public IActionResult Index()
         {

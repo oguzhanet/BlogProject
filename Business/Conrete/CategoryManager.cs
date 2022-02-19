@@ -20,7 +20,7 @@ namespace Business.Conrete
 
         public void Add(Category category)
         {
-            category.CategoryId = "ogzhn" + Guid.NewGuid();
+            category.CategoryId = "ogzhn/" + Guid.NewGuid();
             _categoryDal.Add(category);
         }
 
