@@ -9,5 +9,6 @@ namespace DataAccess.Abstract
 {
     public interface IBlogDal : IEntityRepository<Blog>
     {
+        List<Blog> GetAllWithCategory();
     }
 }
