@@ -20,6 +20,7 @@ namespace Business.Conrete
 
         public void Add(Blog blog)
         {
+            blog.BlogId = "ogzhn/" + Guid.NewGuid();
             _blogDal.Add(blog);
         }
 
@@ -33,9 +34,14 @@ namespace Business.Conrete
             return _blogDal.GetAllWithCategory();
         }
 
+        public List<Blog> GetAllByBlogId(string id)
+        {
+            return _blogDal.GetAll(x => x.BlogId == id);
+        }
+
         public Blog GetById(string id)
         {
-            return _blogDal.Get(x=>x.BlogId == id);
+            return _blogDal.Get(x => x.BlogId == id);
         }
 
         public void Update(Blog blog)

@@ -10,6 +10,7 @@ namespace Business.Abstract
     public interface IBlogService
     {
         List<Blog> GetAll();
+        List<Blog> GetAllByBlogId(string id);
         Blog GetById(string id);
         void Add(Blog blog);
         void Update(Blog blog);
