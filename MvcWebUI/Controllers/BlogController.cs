@@ -18,9 +18,10 @@ namespace MvcWebUI.Controllers
             return View(value);
         }
 
-        public IActionResult BlogDetail(string Id)
+        public IActionResult BlogReadAll(string id)
         {
-            return View();
+            var value = _blogService.GetAllByBlogId(id);
+            return View(value);
         }
     }
 }
