@@ -12,9 +12,9 @@ namespace MvcWebUI.ViewComponents.Component
             _commentService = commentService;
         }
 
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(string id)
         {
-            var value = _commentService.GetAllByBlogId("0f8fad5b-d9cb-469f-a165-70867728dun5");
+            var value = _commentService.GetAllByBlogId(id);
             return View(value);
         }
     }

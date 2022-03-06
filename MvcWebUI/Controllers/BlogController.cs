@@ -20,6 +20,7 @@ namespace MvcWebUI.Controllers
 
         public IActionResult BlogReadAll(string id)
         {
+            ViewBag.blogId = id;
             var value = _blogService.GetAllByBlogId(id);
             return View(value);
         }
